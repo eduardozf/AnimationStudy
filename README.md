@@ -1,3 +1,5 @@
+<video src="./preview.mp4" autoplay muted loop height="200px"></video>
+
 ## About the Project
 
 While researching design references for websites, such as Awwwards, I came across some concepts that I wanted to incorporate into my portfolio. Many of these concepts around the theme of space, which personally captivates me. Given the vast nature of space (depending on one's perspective), I saw an opportunity to create a conceptual website that integrates animations to grab the user's attention.
