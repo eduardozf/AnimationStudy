@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universe of possibilities</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./favicon.svg" />
+    <script type="text/javascript" src="./index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="blackHoleContainer">
+      <div class="videoContainer">
+        <video src="./resources/blackhole.webm" autoplay muted loop></video>
+      </div>
+    </div>
+
+    <div id="starContainer" class="appear"></div>
+
+    <script>
+      execute();
+    </script>
+
+    <div class="buttonContainer">
+      <a id="see" class="myButton">
+        <video src="./resources/sun.mp4" autoplay muted loop for="see"></video>
+        <span for="see">SEE MORE</span>
+      </a>
+    </div>
+
+    <script>
+      const button = document.getElementById("see");
+      const span = button.querySelector("span");
+      const video = button.querySelector("video");
+
+      button.addEventListener("click", (event) => {
+        button.className = `${button.className} myButtonExpanding`;
+        const growAnimation = button.animate(
+          [
+            {
+              marginBottom: "0px",
+              width: "100vw",
+              height: "100vh",
+              transform: "scale(1)",
+            },
+          ],
+          {
+            duration: 2_000,
+            easing: "ease-in-out",
+            fill: "forwards",
+          }
+        );
+
+        growAnimation.onfinish = () => {
+          window.location.href = `loaded.html?time=${video.currentTime}`;
+        };
+
+        span.animate(
+          [
+            {
+              opacity: 1,
+            },
+            {
+              opacity: 0,
+              fontSize: "0px",
+              padding: 0,
+              margin: 0,
+            },
+          ],
+          {
+            duration: 2_000,
+            easing: "ease-in-out",
+            fill: "forwards",
+          }
+        );
+        video.animate(
+          [
+            {
+              height: "800px",
+            },
+          ],
+          {
+            duration: 2_000,
+            easing: "ease-in-out",
+            fill: "forwards",
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  background-color: #040015;
+  color: #ffffff;
+  font-family: "Poetsen One";
+  position: relative;
+}
+
+.star {
+  position: absolute;
+  color: #fff;
+  font-size: 16px;
+  animation: pulsate 2s infinite alternate;
+}
+
+.bounce {
+  animation: 6s ease-in-out infinite reverse both running bounceAnim;
+}
+
+.appear {
+  animation: appearAnim 3s ease-in forwards;
+}
+
+@keyframes pulsate {
+  from {}
+
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes appearAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceAnim {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-3%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}

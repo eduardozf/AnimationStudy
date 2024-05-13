@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universe of possibilities</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./favicon.svg" />
+    <script type="text/javascript" src="./index.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      body {
+        background-color: #000;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 60px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        backdrop-filter: blur(2px);
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 20px;
+      }
+
+      .left,
+      .right {
+        padding: 0 45px;
+      }
+
+      header a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-decoration: none;
+        font-family: "Orbitron";
+        font-size: 16px;
+        letter-spacing: 0.05rem;
+        color: #d3c5d3;
+        opacity: 0.6;
+      }
+
+      header a:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+
+      .blackHoleContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .videoContainer {
+        width: fit-content;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .videoContainer video {
+        height: 800px;
+      }
+
+      #carousel-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      #carousel-content {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .carousel-item {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #prev-btn,
+      #next-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #877f87;
+        opacity: 0.3;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #prev-btn:hover,
+      #next-btn:hover {
+        opacity: 1;
+      }
+
+      #prev-btn {
+        left: 20px;
+      }
+
+      #next-btn {
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="carousel-container">
+      <div id="carousel-content">
+        <div class="carousel-item">
+          <div class="videoContainer">
+            <video
+              id="sunVideo"
+              src="./resources/sun.mp4"
+              autoplay
+              muted
+              loop
+            ></video>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="videoContainer bounce">
+            <img
+              src="./resources/mercury.png"
+              height="200px"
+              alt="Slide 1"
+              style="transform: rotate(-90deg)"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="videoContainer bounce">
+            <img
+              src="./resources/venus.png"
+              height="300px"
+              alt="Slide 2"
+              style="transform: rotate(40deg)"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="videoContainer bounce">
+            <img
+              src="./resources/earth.png"
+              height="400px"
+              alt="Slide 3"
+              style="transform: scaleX(-1)"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="videoContainer bounce">
+            <img
+              src="./resources/moon.png"
+              height="200px"
+              alt="Slide 4"
+              style="transform: rotate(-120deg)"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="videoContainer bounce">
+            <img
+              src="./resources/mars.png"
+              height="300px"
+              alt="Slide 5"
+              style="transform: rotate(-40deg)"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="videoContainer bounce">
+            <img
+              src="./resources/jupiter.png"
+              height="650px"
+              alt="Slide 6"
+              style="transform: scaleX(-1)"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="videoContainer bounce">
+            <img
+              src="./resources/saturn.png"
+              height="550px"
+              alt="Slide 7"
+              style="transform: rotate(20deg)"
+            />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="videoContainer bounce">
+            <img src="./resources/uranus.png" height="420px" alt="Slide 8" />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="videoContainer bounce">
+            <img
+              src="./resources/neptune.png"
+              height="450px"
+              alt="Slide 9"
+              style="transform: scaleX(-1)"
+            />
+          </div>
+        </div>
+      </div>
+      <div id="prev-btn" class="appear">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="currentColor">
+          <path
+            d="M36.562 12.558C37.8417 11.3036 40 12.2102 40 14.0022V49.9935C40 51.7866 37.8401 52.6936 36.56 51.438V51.438L18.56 33.438V33.438C17.7919 32.6318 17.7933 31.3636 18.562 30.558V30.558L36.562 12.558V12.558ZM38 16.2882C38 15.3973 36.9229 14.9511 36.2929 15.5811L20.5811 31.2929C20.1906 31.6834 20.1906 32.3166 20.5811 32.7071L36.2929 48.4189C36.9229 49.0489 38 48.6027 38 47.7118V16.2882Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+      <div id="next-btn" class="appear">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="currentColor">
+          <path
+            d="M27.438 12.558C26.1583 11.3036 24 12.2102 24 14.0022V49.9935C24 51.7866 26.1599 52.6936 27.44 51.438V51.438L45.44 33.438V33.438C46.2081 32.6318 46.2067 31.3636 45.438 30.558V30.558L27.438 12.558V12.558ZM26 16.2882C26 15.3973 27.0771 14.9511 27.7071 15.5811L43.4189 31.2929C43.8094 31.6834 43.8094 32.3166 43.4189 32.7071L27.7071 48.4189C27.0771 49.0489 26 48.6027 26 47.7118V16.2882Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <script>
+      const carouselContent = document.getElementById("carousel-content");
+      const prevBtn = document.getElementById("prev-btn");
+      const nextBtn = document.getElementById("next-btn");
+
+      let currentIndex = 0;
+      const totalItems = document.querySelectorAll(".carousel-item").length;
+
+      prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+        } else {
+          currentIndex = totalItems - 1;
+        }
+        updateCarousel();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        if (currentIndex < totalItems - 1) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        updateCarousel();
+      });
+
+      function updateCarousel() {
+        const itemWidth = document.querySelector(".carousel-item").offsetWidth;
+        const offset = -currentIndex * itemWidth;
+        carouselContent.style.transform = `translateX(${offset}px)`;
+      }
+    </script>
+
+    <div id="starContainer" class="appear"></div>
+
+    <script>
+      // Continue sun video from currentTime
+      const video = document.getElementById("sunVideo");
+      let params = new URLSearchParams(document.location.search);
+      let time = params.get("time");
+      video.currentTime = time;
+
+      // Fill the background with stars
+      createStaticStars(300);
+    </script>
+
+    <header class="appear">
+      <div class="left">
+        <a href="./index.html">&lt</a>
+      </div>
+      <div class="right">
+        <a href="https://www.linkedin.com/in/eduardozf1" target="_blank"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/eduardozf/AnimationStudy" target="_blank"
+          >GitHub</a
+        >
+      </div>
+    </header>
+  </body>
+</html>

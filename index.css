@@ -1,0 +1,91 @@
+.blackHoleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.movingLetter {
+  display: inline-block;
+  position: absolute;
+  color: #f5daff;
+  font-size: 48px;
+}
+
+.videoContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoContainer video {
+  height: 50rem;
+}
+
+
+
+.buttonContainer {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.myButton {
+  --b: 3px;
+  --s: 0.45em;
+  --color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 64px;
+  margin-bottom: 45px;
+
+  font-size: 18px;
+  font-family: "Orbitron";
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 900;
+
+  z-index: 99;
+  padding: 0 20px 0 5px;
+  border: 0;
+  box-shadow: 0 0 50px 0px #261643;
+  cursor: pointer;
+
+  color: var(--color);
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid rgba(255, 255, 255, 0);
+  outline-offset: 0.6em;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  background: #000;
+}
+
+.myButton video {
+  height: 64px;
+}
+
+.myButton:hover,
+.myButton:focus-visible {
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+  transform: scale(1.1);
+}
+
+.myButtonExpanding,
+.myButtonExpanding:hover {
+  cursor: default !important;
+  outline: none !important;
+}
