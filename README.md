@@ -11,7 +11,8 @@ It's worth noting that although I'm a programmer, not a designer, I'm eager to a
 Early in my career, I always aimed to use the best available tools, regardless of project size. While this approach often made coding more satisfying, I found it sometimes introduced unnecessary complexity in projects that should have been straightforward. For this particular project, I chose not to implement a library as it wouldn't significantly enhance agility. This is a conceptual project focused on animations in JavaScript, and part of the programming maturity I've been developing is understanding not only what tools are available but also when and how to apply them.
 
 ## References
-I'd like to emphasize that the assets used in this project were not created by me; they were selected to apply the discussed programming concepts. By that reason the image resource files are not included. Below are the references:
+
+I'd like to emphasize that the assets used in this project were not created by me; they were selected to apply the discussed programming concepts. Below are the references:
 
 - [NFT Map](https://nftmap.com/)
 - [Reflect App](https://reflect.app/)

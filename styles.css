@@ -10,7 +10,7 @@ body {
   overflow: hidden;
   background-color: #040015;
   color: #ffffff;
-  font-family: "Poetsen One";
+  font-family: "Raleway";
   position: relative;
 }
 
@@ -30,7 +30,8 @@ body {
 }
 
 @keyframes pulsate {
-  from {}
+  from {
+  }
 
   to {
     opacity: 0.8;
