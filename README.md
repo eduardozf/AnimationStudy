@@ -4,7 +4,12 @@ While researching design references for websites, such as Awwwards, I came acros
 
 It's worth noting that although I'm a programmer, not a designer, I'm eager to apply some animation concepts using JavaScript and CSS. While I acknowledge there's room for improvement in terms of UI and UX, I'm excited to explore the animation possibilities in this project.
 
-[Preview Video](https://youtu.be/yzbmPEhLAwM)
+- [Preview Page](https://eduardozf.github.io/AnimationStudy/)
+- [Preview Video](https://youtu.be/ow8Syvx2nBw)
+
+<p align="left">
+  <img src="references/exemple.gif" width="70%" height="auto"/>
+</p>
 
 ## Why Didn't I Use Libraries Like Next.js or Tailwind?
 
